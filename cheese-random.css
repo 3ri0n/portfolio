@@ -1,0 +1,16 @@
+
+/* cheese-random.css — random, sparse cheese icons drawn on a canvas behind content */
+html{ background:#0b0a07; }
+body{ margin:0; position:relative; z-index:0; }
+
+/* Canvas sits behind everything */
+#cheeseBG{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  filter: blur(10px) saturate(110%); /* soften */
+}
+
+/* Optional: if your old CSS still draws body::after icons, add this class to <body> to hide them */
+body.cheese-canvas-only::after{ display:none !important; }
