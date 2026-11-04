@@ -48,6 +48,8 @@ Skopje, North Macedonia | Part-time | September 2022-October 2024
 ### Founder | SpaceEagles
 Fixed-wing UAV startup | Two aircraft in development
 
+Instagram: https://www.instagram.com/spaceagles/
+
 - Founded a startup focused on building fixed-wing unmanned aerial vehicles.
 - Developing two aircraft; both projects are currently in progress.
 ### Local AI Smart Home and Personal Assistant
