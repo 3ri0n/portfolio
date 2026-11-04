@@ -106,7 +106,7 @@ const blocks = {
     <b>skills</b> — Technical skills<br>
     <b>experience</b> — Work history<br>
     <b>education</b> — Education & certifications<br>
-    <b>projects</b> — CNCplotter,Go-Cart & more<br>
+    <b>projects</b> — Local AI assistant, SpaceEagles UAVs &amp; CNC plotters<br>
     <b>contact</b> — Contact links<br>
     <b>play</b> / <b>game</b> — Launch minigame<br>
     <b>clear</b> — Clear terminal<br>
@@ -114,14 +114,14 @@ const blocks = {
     <b>date</b> — Current date/time<br>
     <b>matrix</b> — ...<br>
     <b>coffee</b> — Coffee break`,
-  about:`I'm Erion — a builder who loves embedded systems, automation and creative engineering. Studying CE&IT at CIT and working on CNC/ESP32 projects.`,
-  skills:`Programming: Python, SQL, G-code, C++ | Microcontrollers: ESP32/Arduino | Firmware: GRBL | Networking: servers, NAS, security | Data: Power BI | Hardware: stepper/servo control, 3D printing, small factor engines.`,
-  experience:`Hotel Manager — Vila Enhalon (2024–2025)<br>Network Administrator — TCMC (2022–2024)`,
-  education:`BSc CE&IT @ CIT (2023– ) · Certs: CEH (2025), AWS Academy (2025), Cisco Networking (2024), Semos: Advanced Python & Python I (2024), Power BI & T-SQL (2023).`,
-  projects:`CNC Plotter #1 (28BYJ-48 + SG90 + GRBL), CNC Plotter #2 (CD/DVD rails), wiring + video — see the Projects tab.`,
+  about:`I'm Erion — software engineering and testing experience at DigitSapiens, with projects in embedded systems, local AI and automation. Founder of SpaceEagles, with two fixed-wing UAVs in development. Built a Raspberry Pi 5 and Hailo NPU smart-home assistant with camera-based vision.`,
+  skills:`Programming: JavaScript, JSON, Python, C++, SQL, G-code | Testing: software testing, system testing and software quality | Hardware: Raspberry Pi 5, Hailo NPU, ESP32, Arduino, GRBL | AI: local processing, vision and pattern recognition | Infrastructure: servers, NAS, backups and networking | Data: Power BI.`,
+  experience:`Junior Software Engineer — DigitSapiens (started Oct 2025)<br>Software Tester Intern — DigitSapiens (Aug–Oct 2025)<br>Founder — SpaceEagles (two fixed-wing UAVs in development)<br>Seasonal Hotel Manager — Vila Enhalon (recurring four-month summer seasons)<br>Network Administrator — TCMC (part-time, 2022–2024)`,
+  education:`Computer Engineering &amp; IT studies at CIT (started 2023). Training and badges: Cisco JavaScript Essentials 1 (Jan 2026), Oracle Database Administration, Generative AI (CIT), AWS Academy Cloud Web Application Builder (May 2025), Cisco Networking Essentials (Jul 2024), CEH training and Semos Python, Power BI and T-SQL courses.`,
+  projects:`SpaceEagles — two fixed-wing UAVs in development.<br>Local AI smart home and personal assistant — Raspberry Pi 5, Hailo NPU, cameras, vision and pattern recognition.<br>Two Arduino CNC plotters with custom GRBL — see the Projects tab.`,
   contact:`Email: <a href="mailto:erionhani@yahoo.com">erionhani@yahoo.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/erion-hani-636736198/" target="_blank" rel="noopener">/erion-hani</a>`,
   ls:`about/  skills/  experience/  education/  projects/  contact/  cv.pdf`,
-  whoami:`erion — Computer Engineering student; embedded/CNC/IoT/security; Tirana & Skopje; open to opportunities.`,
+  whoami:`erion — Software engineering, testing, embedded systems and local AI; founder of SpaceEagles; open to opportunities.`,
   date:new Date().toString(),
   matrix:`Wake up, Neo…<br>The Matrix has you.<br>Follow the orange glow.`,
   coffee:`☕ Brewing coffee… Done. Caffeine level: OPTIMAL.`,
