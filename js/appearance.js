@@ -28,7 +28,7 @@ export function initAppearance({ onWelcomeChange, onEnter }) {
   checkbox.addEventListener('change', () => saveTheme(checkbox.checked ? 'light' : 'dark'));
   toggle.addEventListener('click', () => saveTheme(root.dataset.theme === 'light' ? 'dark' : 'light'));
 
-  let entered = Boolean(location.hash);
+  let entered = true;
   function enter() {
     if (entered) return;
     entered = true;
@@ -46,6 +46,16 @@ export function initAppearance({ onWelcomeChange, onEnter }) {
   }
 
   start.addEventListener('click', enter);
+  document.querySelector('#open-intro').addEventListener('click', () => {
+    entered = false;
+    welcome.hidden = false;
+    welcome.inert = false;
+    welcome.classList.remove('is-dismissing');
+    shell.inert = true;
+    document.body.classList.add('welcome-open');
+    onWelcomeChange(true);
+    start.focus();
+  });
   window.addEventListener('hashchange', enter);
   window.addEventListener('keydown', (event) => {
     if (entered || event.ctrlKey || event.metaKey || event.altKey) return;
@@ -53,10 +63,5 @@ export function initAppearance({ onWelcomeChange, onEnter }) {
     if (event.key.length === 1 || event.key === 'Enter') enter();
   });
 
-  if (!entered) {
-    welcome.hidden = false;
-    shell.inert = true;
-    document.body.classList.add('welcome-open');
-  }
   onWelcomeChange(!entered);
 }

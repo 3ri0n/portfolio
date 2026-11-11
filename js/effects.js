@@ -1,5 +1,4 @@
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-const finePointer = matchMedia('(pointer: fine) and (hover: hover)');
 const random = (min, max) => min + Math.random() * (max - min);
 
 function canvasScene(canvas, createScene) {
@@ -103,50 +102,41 @@ function cheese(context, width, height, image) {
 function initFollower() {
   const follower = document.querySelector('#follower');
   let frame = 0;
-  let x;
-  let y;
-  let targetX;
-  let targetY;
-
-  function hide() {
+  let x, y, targetX, targetY;
+  function park() {
     cancelAnimationFrame(frame);
     frame = 0;
     x = undefined;
-    follower.classList.remove('is-visible');
-    document.body.classList.remove('has-follower');
+    follower.classList.add('is-parked');
   }
-
   function draw() {
     frame = 0;
-    const dx = targetX - x;
-    const dy = targetY - y;
-    x += dx * 0.18;
-    y += dy * 0.18;
-    follower.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0) translate(-50%,-50%) rotate(' +
-      Math.atan2(dy, dx) * 3 + 'deg)';
-    if (Math.abs(dx) + Math.abs(dy) > 0.4) frame = requestAnimationFrame(draw);
+    const dx = targetX - x, dy = targetY - y;
+    x += dx * .15; y += dy * .15;
+    follower.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0) rotate(' + Math.max(-12, Math.min(12, dx * .4)) + 'deg)';
+    if (Math.abs(dx) + Math.abs(dy) > .4) frame = requestAnimationFrame(draw);
   }
-
-  window.addEventListener('pointermove', (event) => {
-    if (!finePointer.matches || reducedMotion.matches || event.pointerType === 'touch' ||
-        (event.target instanceof Element && event.target.closest('#in, dialog'))) {
-      hide();
+  window.addEventListener('pointermove', event => {
+    if (event.pointerType !== 'mouse' ||
+        (event.target instanceof Element && event.target.closest('input, dialog, .airframe-scene'))) {
+      park(); return;
+    }
+    targetX = Math.max(0, Math.min(innerWidth - 46, event.clientX + 22));
+    targetY = Math.max(0, Math.min(innerHeight - 70, event.clientY + 18));
+    x ??= targetX; y ??= targetY;
+    follower.classList.remove('is-parked');
+    if (reducedMotion.matches) {
+      x = targetX; y = targetY;
+      draw();
       return;
     }
-    targetX = event.clientX;
-    targetY = event.clientY;
-    x ??= targetX;
-    y ??= targetY;
-    follower.classList.add('is-visible');
-    document.body.classList.add('has-follower');
     if (!frame) frame = requestAnimationFrame(draw);
-  }, { passive: true });
-
-  document.documentElement.addEventListener('pointerleave', hide);
-  window.addEventListener('blur', hide);
-  document.addEventListener('keydown', hide);
-  reducedMotion.addEventListener('change', hide);
-  finePointer.addEventListener('change', hide);
+  }, {passive:true});
+  document.documentElement.addEventListener('pointerleave', park);
+  window.addEventListener('blur', park);
+  document.addEventListener('keydown', park);
+  reducedMotion.addEventListener('change', park);
+  document.addEventListener('visibilitychange', park);
 }
 
 export function initEffects() {
