@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="t d">
+ <title id="t">Local AI hardware illustration</title><desc id="d">Isometric illustration of a Raspberry Pi 5, Hailo accelerator and camera connected by glowing traces.</desc>
+ <defs>
+  <radialGradient id="bg"><stop stop-color="#172c26"/><stop offset="1" stop-color="#09110f"/></radialGradient>
+  <linearGradient id="pcb" x2="1" y2="1"><stop stop-color="#3e6b53"/><stop offset="1" stop-color="#153d31"/></linearGradient>
+  <linearGradient id="metal" x2="1" y2="1"><stop stop-color="#eef4e9"/><stop offset=".5" stop-color="#a7b9a6"/><stop offset="1" stop-color="#49594e"/></linearGradient>
+  <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" stroke="#426452" stroke-opacity=".25" fill="none"/></pattern>
+  <filter id="glow" x="-70%" width="240%" y="-70%" height="240%"><feGaussianBlur stdDeviation="5"/></filter>
+ </defs>
+ <path fill="url(#bg)" d="M0 0h800v480H0z"/><path fill="url(#grid)" d="M0 0h800v480H0z"/>
+ <g fill="none" stroke="#8effbb" stroke-width="2"><path d="M176 139H248L316 207" opacity=".45"/><path d="M526 239l78-88h55" opacity=".45"/><path d="M493 340l96 38h105" opacity=".45"/></g>
+ <ellipse cx="410" cy="312" rx="231" ry="83" fill="#000" opacity=".5" filter="url(#glow)"/>
+ <g transform="matrix(.9 .46 -.93 .46 402 93)">
+  <rect x="0" y="24" width="347" height="216" rx="17" fill="#0a251f" stroke="#5b8b62" stroke-width="2"/>
+  <rect x="0" y="10" width="347" height="216" rx="17" fill="url(#pcb)" stroke="#77aa74" stroke-width="2"/>
+  <path d="M33 29H214V54H259M36 188H84v-43h42m36 42v-34h64m-107-85H78v46H38m197-5h48v27h42m-143 64h132" fill="none" stroke="#88bc82" stroke-width="3" opacity=".7"/>
+  <g fill="#17241b" stroke="#c5bb77" stroke-width="3"><circle cx="22" cy="32" r="8"/><circle cx="325" cy="32" r="8"/><circle cx="22" cy="203" r="8"/><circle cx="325" cy="203" r="8"/></g>
+  <rect x="108" y="64" width="91" height="85" rx="4" fill="#141b17" stroke="#101913" stroke-width="5"/><rect x="115" y="70" width="77" height="71" rx="3" fill="url(#metal)"/>
+  <text x="153" y="102" text-anchor="middle" fill="#223b2c" font-family="monospace" font-size="16" font-weight="bold">Pi 5</text><text x="153" y="122" text-anchor="middle" fill="#365341" font-family="monospace" font-size="10">HOST</text>
+  <g fill="url(#metal)" stroke="#567360" stroke-width="2"><rect x="276" y="44" width="73" height="52" rx="5"/><rect x="276" y="108" width="73" height="52" rx="5"/><rect x="276" y="171" width="73" height="49" rx="5"/><rect x="26" y="168" width="42" height="24" rx="3"/><rect x="79" y="180" width="35" height="22" rx="3"/></g>
+  <g fill="#10291f" stroke="#749672"><rect x="216" y="127" width="42" height="38" rx="2"/><rect x="46" y="77" width="36" height="33" rx="2"/></g>
+  <path d="M55 44h150" stroke="#121b16" stroke-width="16"/><path d="M57 44h146" stroke="#d7bd73" stroke-width="8" stroke-dasharray="3 5"/>
+  <circle cx="253" cy="195" r="7" fill="#a9ffc0" filter="url(#glow)"/><circle cx="253" cy="195" r="3" fill="#bcffd4"/>
+ </g>
+ <g transform="matrix(.78 .4 -.82 .4 543 237)"><rect x="0" y="16" width="159" height="81" rx="8" fill="#132922"/><rect width="159" height="81" rx="8" fill="#20634d" stroke="#86d797" stroke-width="2"/><rect x="43" y="14" width="73" height="54" rx="3" fill="#10241d"/><text x="80" y="48" font-family="monospace" text-anchor="middle" fill="#acffbe" font-size="15" font-weight="bold">HAILO</text><path d="M8 25v34m142-34v34" stroke="#d5b96d" stroke-width="7" stroke-dasharray="3 4"/></g>
+ <g transform="translate(141 121)"><path d="M-20-17h50v43h-50z" fill="#274d3c" stroke="#83b986"/><rect x="-10" y="-11" width="31" height="31" rx="3" fill="#121b19"/><circle cx="5.5" cy="4.5" r="13" fill="#1b262c" stroke="#829f94"/><circle cx="5.5" cy="4.5" r="8" fill="#242b46"/><circle cx="8" cy="1" r="2.5" fill="#bbf4d6"/></g>
+ <g font-family="monospace" font-size="13" fill="#b7e4cb"><text x="113" y="181">01 / CAMERA</text><text x="617" y="138">02 / EDGE HOST</text><text x="598" y="400">03 / HAILO NPU</text></g>
+ <g fill="#adffc5"><circle cx="248" cy="139" r="3"/><circle cx="603" cy="151" r="3"/><circle cx="589" cy="378" r="3"/></g>
+</svg>

@@ -1,91 +1,102 @@
 # Erion Hani
 
-Software Engineering | Embedded Systems | Local AI
+Software engineering · Embedded systems · Local AI
 
 Tirana, Albania / Skopje, North Macedonia
-erionhani@yahoo.com | +355 692653841 | +389 71807855
-GitHub: https://github.com/3ri0n
-LinkedIn: https://www.linkedin.com/in/erion-hani-636736198/
+erionhani@yahoo.com · +355 69 265 3841 · +389 71 807 855
+https://3ri0n.github.io/portfolio/
+https://github.com/3ri0n
+https://www.linkedin.com/in/erion-hani-636736198/
 
 
-## Profile
+## About me
 
-Software engineering and testing experience at DigitSapiens, alongside hands-on work in network administration, embedded systems and local AI. Founder of SpaceEagles, a startup developing two fixed-wing UAVs. Built a Raspberry Pi 5 and Hailo NPU smart-home assistant with camera-based vision, alongside Arduino CNC systems.
+Software engineer with experience in JavaScript, JSON, software testing, and systems administration. Founder of SpaceEagles, where I build fixed-wing UAVs. My projects also include an on-device computer vision assistant and Arduino CNC plotters.
 
 
-## Technical Skills
-
-- Programming: JavaScript, JSON, Python, C++, SQL and G-code.
-- Testing: software testing, system testing, software quality and testing processes.
-- Embedded systems: Raspberry Pi 5, Hailo NPU, ESP32, Arduino, GRBL, sensors, stepper and servo control.
-- AI and automation: local AI processing, computer vision, pattern recognition and smart-home integration.
-- Infrastructure: on-premises and cloud servers, NAS, backups, disaster recovery, networking and security.
-- Engineering and data: 3D printing, CAD, circuit assembly, Power BI and database management.
-
-## Work Experience
+## Work experience
 
 ### Junior Software Engineer | DigitSapiens
-Tirana, Albania | Started October 2025
+Tirana, Albania · Started October 2025
 
 - Worked with JavaScript and JSON.
+
 ### Software Tester Intern | DigitSapiens
-Tirana, Albania | August-October 2025
+Tirana, Albania · August–October 2025
 
-- Gained experience in software testing, system testing, software quality and testing processes.
-### Hotel Manager | Vila Enhalon
-Struga, North Macedonia | Recurring four-month summer seasons
-
-- Managed daily operations at the family hotel, including reservations, guest services and digital records.
-- Coordinated staff schedules, housekeeping and maintenance; handled financial reporting and online guest engagement.
-### Network Administrator | Training Center for Management of Conflict
-Skopje, North Macedonia | Part-time | September 2022-October 2024
-
-- Maintained computers and administered on-premises and cloud servers for staff and volunteers.
-- Managed NAS storage, backups, disaster recovery and network security; supported website hosting and updates.
-
-## Startup and Engineering Projects
+- Worked on software and system testing, software quality, and testing processes.
 
 ### Founder | SpaceEagles
-Fixed-wing UAV startup | Two aircraft in development
+Fixed-wing UAV startup · Two aircraft in development
 
-Instagram: https://www.instagram.com/spaceagles/
+- Building a fixed-wing UAV using the Eclipson Model B XL airframe and exploring a second aircraft.
 
-- Founded a startup focused on building fixed-wing unmanned aerial vehicles.
-- Developing two aircraft; both projects are currently in progress.
-### Local AI Smart Home and Personal Assistant
-Raspberry Pi 5 | Hailo NPU | Cameras
+### Seasonal Hotel Manager | Vila Enhalon
+Struga, North Macedonia · Recurring four-month summer seasons
 
-- Built a smart-home and personal-assistant system with AI processing running locally on a Raspberry Pi 5 and Hailo NPU.
-- Integrated camera-based vision, pattern recognition and learning features for assistant and smart-home functions.
-- Added remote access to a personal PC to support working while away from home.
-### CNC Pen Plotters
-Arduino Uno | Custom GRBL | G-code | March-June 2025
+- Managed reservations, guest services, staff schedules, and financial reporting at the family hotel.
+- Coordinated housekeeping and maintenance and handled online guest engagement.
 
-- Built two CNC plotters using recycled printer components and CD/DVD drive mechanisms, with stepper motors and servo-controlled pen lifts.
-- Modified GRBL for pen control and used Inkscape and Universal G-code Sender for toolpaths and machine operation.
+### Network Administrator (part-time) | Training Center for Management of Conflict
+Skopje, North Macedonia · September 2022–October 2024
+
+- Maintained computers, networks, and on-premises and cloud servers.
+- Managed NAS storage, backups, recovery and network security, and supported website hosting.
+
 
 ## Education
 
-### Computer Engineering and Information Technology Studies
-Canadian Institute of Technology (CIT), Tirana | Started October 2023
+### Bachelor in Computer Engineering and Information Technology
+Canadian Institute of Technology, Tirana · 180 ECTS · Awarded 2026
+
 
 ### High School Diploma
-ShMQSh Zef Lush Marku, Skopje | 2019-2023
+ShMQSh Zef Lush Marku, Skopje · 2019–2023
 
 
-## Training and Badges
 
-- JavaScript Essentials 1 - Cisco | 31 January 2026
-- Oracle Database Administration
-- Generative AI - Canadian Institute of Technology (CIT)
-- AWS Academy Graduate - Cloud Web Application Builder - AWS training badge | 17 May 2025
-- Networking Essentials - Cisco | 7 July 2024
-- Certified Ethical Hacker (CEH) training - EC-Council | 2025
-- Advanced Python; Python Level I - Semos Education | 2024
-- Analyzing Data with Python - Semos Education | 2023
-- Power BI Data Analyst (PL-300); Transact-SQL - Semos Education training | 2023
+## Technical skills
+
+JavaScript, JSON, Python, C++, SQL and G-code. Software and system testing. Raspberry Pi, Hailo, Arduino and ESP32. CAD, 3D printing and CNC control. Networking, servers, NAS, backups, AWS and Power BI.
+
+
+## Selected projects
+
+### TRTL T1 | Edge-AI Personal Assistant and Smart-Space Hub
+CIT thesis · Raspberry Pi 5 · Hailo NPU · ESP32 camera and sensor nodes
+
+- Built a hub that processes camera data locally for vision, pattern recognition, and smart-home automation.
+- Integrated remote access to my PC for working away from home.
+
+### Arduino CNC Pen Plotters
+Arduino · GRBL · G-code · Recycled mechanisms
+
+- Built two plotters with recycled printer parts and CD/DVD drive mechanisms. Modified GRBL for a servo-controlled pen lift.
+
+### Fully Custom 3D Printer
+CIT 5th Student Conference · 8 May 2026
+
+- Built a printer using DVD drive mechanisms and an Arduino Uno. Received a conference participation certificate.
+
+### Arduino Slot Machine
+Arduino Uno · Two LCDs
+
+- Built a tabletop prototype with two LCDs and a payout mechanism controlled by the Arduino.
+
+
+## Training and credentials
+
+- Database Foundations - English · Oracle Academy / CIT · 12 February 2026
+- Smart and Sustainable AI Content Creation for Audio-Visual Media · CIT · CPD course completion
+- JavaScript Essentials 1 · Cisco Networking Academy · 31 January 2026
+- Certified Ethical Hacker v13 · EC-Council / Semos · Training attendance · 18 July 2025
+- AWS Academy Graduate - Cloud Web Application Builder · AWS Academy training · 17 May 2025
+- Networking Essentials · Cisco Networking Academy / CIT · 7 July 2024
+- Advanced Python and Python Level I · Semos Education · 2024
+- Analyzing Data with Python · Semos Education · 7 June 2023
+- PL-300 Power BI Data Analyst and DP-080 Transact-SQL · Semos / Microsoft courses · 2023
 
 ## Languages
 
-Albanian (native), Macedonian (C2), English (C2), Serbian (A2-B2 across skills), German (A2).
+Albanian (native), Macedonian (C2), English (C2), Serbian (A2-B2 by skill), German (A2).
 

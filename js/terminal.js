@@ -3,11 +3,13 @@ const sections = {
   skills: 'skills',
   experience: 'experience',
   education: 'edu-certs',
+  certificates: 'edu-certs',
   projects: 'projects',
   contact: 'contact',
+  terminal: 'terminal',
 };
 const messages = {
-  help: 'Available commands:\nwhoami — Short bio\nabout — Learn about me\nskills — Technical skills\nexperience — Work history\neducation — Education and training\nprojects — Local AI assistant, SpaceEagles and CNC plotters\ncontact — Contact links\nplay / game — Launch minigame\nclear — Clear terminal\nls — List sections\ndate — Current date/time\nmatrix — ...\ncoffee — Coffee break',
+  help: 'NAVIGATE\n/projects  /certificates  /experience  /skills  /about  /contact\nUse a bare section name to print a summary here.\n\nSHELL\nwhoami · ls · date · clear · coffee · play · matrix\nUp / Down recalls command history.',
   whoami: 'erion — Software engineering, testing, embedded systems and local AI; founder of SpaceEagles; open to opportunities.',
   ls: 'about/  skills/  experience/  education/  projects/  contact/  cv.pdf',
   matrix: 'Wake up, Neo…\nThe Matrix has you.\nFollow the orange glow.',
@@ -18,7 +20,7 @@ const messages = {
   bo: '❄⏲',
 };
 
-export function initTerminal({ getPanel, openGame }) {
+export function initTerminal({ getPanel, navigate, openGame }) {
   const output = document.querySelector('#out');
   const input = document.querySelector('#in');
   const glow = document.querySelector('#glow-button');
@@ -88,7 +90,7 @@ export function initTerminal({ getPanel, openGame }) {
     input.value = '';
     if (!original) return;
 
-    const command = original.toLowerCase();
+    const command = original.toLowerCase().replace(/^\//, '');
     if (history.at(-1) !== original) history.push(original);
     if (history.length > 50) history.shift();
     historyIndex = history.length;
@@ -100,7 +102,9 @@ export function initTerminal({ getPanel, openGame }) {
     }
 
     echo(original);
-    if (command === 'play' || command === 'game') {
+    if (original.startsWith('/') && Object.hasOwn(sections, command)) {
+      navigate(sections[command]);
+    } else if (command === 'play' || command === 'game') {
       try {
         await openGame();
         line('Launching minigame… Press Esc to exit.', 'muted');

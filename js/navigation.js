@@ -129,6 +129,11 @@ export function initNavigation() {
 
   return {
     getPanel: id => panels.get(id),
+    navigate(id) {
+      if (!panels.has(id)) return;
+      select(id, true);
+      panels.get(id).focus({ preventScroll: true });
+    },
     focusCurrent() {
       const target = current === 'terminal' && !mobile.matches
         ? document.querySelector('#in')
