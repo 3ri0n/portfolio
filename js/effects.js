@@ -101,42 +101,47 @@ function cheese(context, width, height, image) {
 
 function initFollower() {
   const follower = document.querySelector('#follower');
+  const input = document.querySelector('#in');
   let frame = 0;
-  let x, y, targetX, targetY;
-  function park() {
+  let x = innerWidth / 2;
+  let y = innerHeight / 2;
+  let targetX = x;
+  let targetY = y;
+
+  function hide() {
     cancelAnimationFrame(frame);
     frame = 0;
-    x = undefined;
-    follower.classList.add('is-parked');
+    follower.classList.remove('is-tracking');
+    document.body.classList.remove('has-follower');
   }
+
   function draw() {
     frame = 0;
-    const dx = targetX - x, dy = targetY - y;
-    x += dx * .15; y += dy * .15;
-    follower.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0) rotate(' + Math.max(-12, Math.min(12, dx * .4)) + 'deg)';
-    if (Math.abs(dx) + Math.abs(dy) > .4) frame = requestAnimationFrame(draw);
+    // Match the original 15% easing and movement angle at the cursor position.
+    x += (targetX - x) * .15;
+    y += (targetY - y) * .15;
+    const dx = targetX - x;
+    const dy = targetY - y;
+    const moving = Math.abs(dx) + Math.abs(dy) > .4;
+    if (!moving) { x = targetX; y = targetY; }
+    const angle = moving ? Math.atan2(dy, dx) * 10 / Math.PI : 0;
+    follower.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${angle}deg)`;
+    if (moving) frame = requestAnimationFrame(draw);
   }
-  window.addEventListener('pointermove', event => {
-    if (event.pointerType !== 'mouse' ||
-        (event.target instanceof Element && event.target.closest('input, dialog, .airframe-scene'))) {
-      park(); return;
-    }
-    targetX = Math.max(0, Math.min(innerWidth - 46, event.clientX + 22));
-    targetY = Math.max(0, Math.min(innerHeight - 70, event.clientY + 18));
-    x ??= targetX; y ??= targetY;
-    follower.classList.remove('is-parked');
-    if (reducedMotion.matches) {
-      x = targetX; y = targetY;
-      draw();
-      return;
-    }
+
+  window.addEventListener('mousemove', event => {
+    targetX = event.clientX;
+    targetY = event.clientY;
+    follower.classList.add('is-tracking');
+    document.body.classList.add('has-follower');
     if (!frame) frame = requestAnimationFrame(draw);
-  }, {passive:true});
-  document.documentElement.addEventListener('pointerleave', park);
-  window.addEventListener('blur', park);
-  document.addEventListener('keydown', park);
-  reducedMotion.addEventListener('change', park);
-  document.addEventListener('visibilitychange', park);
+  }, { passive: true });
+  window.addEventListener('touchstart', hide, { passive: true });
+  document.documentElement.addEventListener('pointerleave', hide);
+  window.addEventListener('blur', hide);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) hide(); });
+  input.addEventListener('focus', () => follower.classList.add('is-dimmed'));
+  input.addEventListener('blur', () => follower.classList.remove('is-dimmed'));
 }
 
 export function initEffects() {
